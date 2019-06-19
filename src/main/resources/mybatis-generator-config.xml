@@ -15,23 +15,26 @@
             <property name="suppressAllComments" value="true" />
         </commentGenerator>
 
-        <!-- jdbc连接 -->
+        <!-- jdbc连接信息，包括数据库地址，用户名，密码 -->
         <jdbcConnection driverClass="com.mysql.jdbc.Driver"
                         connectionURL="jdbc:mysql://localhost:3306/demo"
                         userId="root"
                         password="123456" />
-
+        <!--生成的domain所在的包-->
         <javaModelGenerator targetPackage="com.demo.domain.model"
                             targetProject="src/main/java">
             <!-- 是否针对string类型的字段在set的时候进行trim调用 -->
             <property name="trimStrings" value="true" />
         </javaModelGenerator>
 
+        <!--生成的mapper接口所在的包-->
         <sqlMapGenerator targetPackage="mappers" targetProject="src/main/java" />
 
+        <!--生成的*mapper.xml所在的包-->
         <javaClientGenerator targetPackage="com.demo.infra.persistence.sql.mapper"
                              targetProject="src/main/java" type="XMLMAPPER" />
 
+        <!--数据库中需要生成的目标表名-->
         <table tableName="repellent_plan" domainObjectName="RepellentPlan">
         </table>
 
