@@ -94,3 +94,6 @@ fabric.properties
 # Android studio 3.1+ serialized cache file
 .idea/caches/build_file_checksums.ser
 /src/main/resources/mybatis-generator-config.xml
+/src/main/java/com/demo/domain/model/
+/src/main/java/com/demo/infra/persistence/sql/mapper/
+/src/main/java/mappers/
